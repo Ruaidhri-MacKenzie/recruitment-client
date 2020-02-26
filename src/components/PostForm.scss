@@ -1,0 +1,79 @@
+@import '../App.scss';
+
+.post-form {
+	@include border-thin;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
+	display: grid;
+	grid-template-areas:
+		"title			title				description"
+		"company		company			description"
+		"location		location		description"
+		"salary			salary			requirements"
+		"close			close				requirements"
+		"start			start				requirements"
+		".					submit			.";
+
+	&__title {
+		grid-area: title;
+	}
+	
+	&__company {
+		grid-area: company;
+	}
+	
+	&__location {
+		grid-area: location;
+	}
+	
+	&__salary {
+		grid-area: salary;
+		justify-self: left;
+	}
+	
+	&__description {
+		grid-area: description;
+	}
+	
+	&__requirements {
+		grid-area: requirements;
+	}
+	
+	&__close {
+		grid-area: close;
+		justify-self: right;
+	}
+
+	&__start {
+		grid-area: start;
+		justify-self: right;
+	}
+
+	&__submit {
+		grid-area: submit;
+	}
+	
+	&__input {
+		margin: 1em;
+		padding: 0.5em;
+		font-size: 1.5rem;
+	}
+	
+	&__label {
+		font-size: 1.5rem;
+	}
+
+	&__text-area {
+		resize: none;
+		margin: 1em;
+		padding: 0.5em;
+		font-size: 1.5rem;
+	}
+
+	&__button {
+		@include button;
+		margin-bottom: 0.5em;
+	}
+}

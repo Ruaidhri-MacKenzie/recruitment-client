@@ -1,0 +1,27 @@
+@import '../App.scss';
+
+.new-post {
+	@include panel;	
+	grid-area: posts;
+	background-color: var(--light);
+	text-align: center;
+	display: grid;
+	grid-template-rows: auto 1fr;
+
+	&__header {
+		display: grid;
+		grid-template-columns: 86px 1fr 86px;
+		grid-template-areas:
+			"cancel title	.";
+	}
+	
+	&__cancel {
+		@include button-small;
+		grid-area: cancel;
+		margin-bottom: 1em;
+	}
+
+	&__title {
+		grid-area: title;
+	}
+}
