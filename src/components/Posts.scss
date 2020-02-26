@@ -1,0 +1,30 @@
+@import '../layout/Main.scss';
+
+.posts {
+	@include panel;
+	grid-area: posts;
+	background-color: var(--light);
+	text-align: center;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	
+	&__title {
+		margin-bottom: 0.5em;
+	}
+	
+	&__list {
+		@include border-thin;
+		padding: 0.5em;
+		background-color: #eee;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__no-posts {
+		margin: auto;
+	}
+}
+
+.post {
+	@include border-thin;
+}
