@@ -1,0 +1,16 @@
+:root {
+	--colour1: #72195a;
+	--colour2: #4c1036;
+	--light: #f2f3f4;
+	--dark: #070707;
+}
+
+.App {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+	"header"
+	"main"
+	"footer";
+}
