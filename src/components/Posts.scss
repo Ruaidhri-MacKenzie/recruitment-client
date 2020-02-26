@@ -1,4 +1,4 @@
-@import '../layout/Main.scss';
+@import '../App.scss';
 
 .posts {
 	@include panel;
@@ -7,14 +7,27 @@
 	text-align: center;
 	display: grid;
 	grid-template-rows: auto 1fr;
-	
-	&__title {
-		margin-bottom: 0.5em;
+
+	&__header {
+		display: grid;
+		grid-template-columns: 86px 1fr 86px;
+		grid-template-areas:
+			". title	new-post";
 	}
 	
+	&__title {
+		grid-area: title;
+	}
+	
+	&__new-post {
+		@include button-small;
+		grid-area: new-post;
+		margin-bottom: 1em;
+	}
+
 	&__list {
 		@include border-thin;
-		padding: 0.5em;
+		padding: 1em 0.5em;
 		background-color: #eee;
 		display: flex;
 		flex-direction: column;
@@ -27,4 +40,13 @@
 
 .post {
 	@include border-thin;
+	cursor: pointer;
+	padding: 0.5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__title {
+		font-size: 1.25rem;
+	}
 }
