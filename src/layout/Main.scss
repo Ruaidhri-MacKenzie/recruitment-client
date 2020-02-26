@@ -1,0 +1,38 @@
+.main {
+	grid-area: main;
+	background-color: #ddd;
+
+	padding: 1em;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		"user posts"
+		".		posts";
+	grid-gap: 1em;
+}
+
+@mixin border-thick {
+	border: 2px solid var(--colour1);
+}
+
+@mixin border-thin {
+	border: 1px solid var(--colour1);
+}
+
+@mixin panel {
+	@include border-thick;
+	padding: 1em;
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+@mixin button {
+	padding: 0.25em 0.5em;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 5px;
+	background-color: var(--colour1);
+	color: var(--light);
+	font-size: 1.25rem;
+}

@@ -1,0 +1,10 @@
+.footer {
+	grid-area: footer;
+	padding: 1em;
+	background-color: var(--dark);
+	text-align: right;
+
+	&__copyright {
+		color: var(--light);
+	}
+}

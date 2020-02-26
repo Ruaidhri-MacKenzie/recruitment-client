@@ -1,0 +1,13 @@
+.header {
+	grid-area: header;
+	padding: 1.5em;
+	background-color: var(--dark);
+
+	&__title {
+		color: var(--light);
+	}
+	
+	&__subtitle {
+		color: var(--light);
+	}
+}
