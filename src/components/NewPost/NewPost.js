@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewPost.scss';
 
-import PostForm from './PostForm';
+import PostForm from '../PostForm/PostForm';
 
 const NewPost = ({ setNewPost }) => {
 	const closeNewPost = () => setNewPost(false);

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.scss';
 
-import Header from './layout/Header';
-import Main from './layout/Main';
-import Footer from './layout/Footer';
+import Header from './layout/Header/Header';
+import Main from './layout/Main/Main';
+import Footer from './layout/Footer/Footer';
 
 function App() {
 	const [user, setUser] = useState(null);

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Main.scss';
 
-import User from '../components/User';
-import NewPost from '../components/NewPost';
-import Posts from '../components/Posts';
+import User from '../../components/User/User';
+import NewPost from '../../components/NewPost/NewPost';
+import Posts from '../../components/Posts/Posts';
 
 const Main = ({ user, setUser, posts, setPosts, newPost, setNewPost }) => {
 	return (
