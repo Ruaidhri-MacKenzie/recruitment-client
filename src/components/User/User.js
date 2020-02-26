@@ -3,8 +3,8 @@ import axios from 'axios';
 import cookies from 'js-cookie';
 import './User.scss';
 
-import AuthForm from '../AuthForm/AuthForm';
-import UserDetails from '../UserDetails/UserDetails';
+import AuthForm from './AuthForm/AuthForm';
+import UserDetails from './UserDetails/UserDetails';
 
 const User = ({ user, setUser }) => {
 	const reconnect = () => {
