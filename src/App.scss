@@ -14,3 +14,33 @@
 	"main"
 	"footer";
 }
+
+@mixin border-thick {
+	border: 2px solid var(--colour1);
+}
+
+@mixin border-thin {
+	border: 1px solid var(--colour1);
+}
+
+@mixin panel {
+	@include border-thick;
+	padding: 1em;
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+@mixin button {
+	padding: 0.25em 0.5em;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 5px;
+	background-color: var(--colour1);
+	color: var(--light);
+	font-size: 1.25rem;
+}
+
+@mixin button-small {
+	@include button;
+	font-size: 1rem;
+}
