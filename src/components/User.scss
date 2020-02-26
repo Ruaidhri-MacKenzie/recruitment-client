@@ -1,0 +1,14 @@
+@import '../layout/Main.scss';
+
+.user {
+	@include panel;
+	grid-area: user;
+	background-color: var(--light);
+	text-align: center;
+
+	&__title {
+		margin-bottom: 0.5em;
+		cursor: default;
+		user-select: none;
+	}
+}
