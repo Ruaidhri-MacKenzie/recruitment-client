@@ -1,19 +1,17 @@
 import React from 'react';
 import './Main.scss';
 
-// No token - authenticate/sign up screen - username and password
-// token - show dashboard - show user data
-// display posts
-// display post details
-
 import User from '../components/User';
+import NewPost from '../components/NewPost';
 import Posts from '../components/Posts';
 
-const Main = ({ user, posts, signUp, signIn, signOut }) => {
+const Main = ({ user, setUser, posts, setPosts, newPost, setNewPost }) => {
 	return (
 		<main className="main">
-			<User user={user} signUp={signUp} signIn={signIn} signOut={signOut} />
-			<Posts posts={posts} />
+			<User user={user} setUser={setUser} />
+			{user && newPost
+				? <NewPost setNewPost={setNewPost} />
+				: <Posts user={user} posts={posts} setPosts={setPosts} setNewPost={setNewPost} />}
 		</main>
 	);
 };
