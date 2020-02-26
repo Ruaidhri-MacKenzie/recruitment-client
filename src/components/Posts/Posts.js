@@ -2,16 +2,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import './Posts.scss';
 
-const Post = ({ post }) => {
-	return (
-		<li className="post">
-			<p className="post__title">{post.title}</p>
-			<p className="post__location">{post.location}</p>
-			<p className="post__company">{post.company}</p>
-			<p className="post__salary">£{post.salary}</p>
-		</li>
-	);
-};
+import Post from './Post/Post';
 
 const Posts = ({ user, posts, setPosts, setNewPost }) => {
 	const openNewPost = () => setNewPost(true);

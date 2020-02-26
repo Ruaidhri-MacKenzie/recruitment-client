@@ -1,0 +1,14 @@
+@import '../../../App.scss';
+
+.post {
+	@include border-thin;
+	cursor: pointer;
+	padding: 0.5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__title {
+		font-size: 1.25rem;
+	}
+}
