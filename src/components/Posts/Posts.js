@@ -1,20 +1,10 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import './Posts.scss';
 
 import Post from './Post/Post';
 
-const Posts = ({ user, posts, setPosts, setNewPost }) => {
+const Posts = ({ user, posts, setNewPost }) => {
 	const openNewPost = () => setNewPost(true);
-
-	const getPosts = () => {
-		axios.get('/post')
-		.then(result => {
-			setPosts(result.data);
-		})
-		.catch(err => console.log("ERROR: " + err.message));
-	};
-	useEffect(getPosts, []);
 
 	return (
 		<section className="posts">
